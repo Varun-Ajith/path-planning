@@ -15,19 +15,16 @@ pip install pygame
 After installing Pygame, you can clone this repository using the following command:
 git clone https://github.com/Varun-Ajith/path-planning.git
 
-Navigate to the cloned directory:
-
-`cd path-planning`
-Run the Python script:
-`python Path_planning.py`
+Navigate to the cloned directory: `cd path-planning`
+Run the Python script: `python Path_planning.py`
 
 ## Instructions
-Left-click on any empty grid square to place the starting node.
-Left-click on another empty grid square to place the ending node.
-Left-click and drag to create barriers.
-Right-click on a placed node to remove it.
-Press the Spacebar to start the A* algorithm visualization.
-Press 'c' to clear the grid and reset.
+- Left-click on any empty grid square to place the starting node.
+- Left-click on another empty grid square to place the ending node.
+- Left-click and drag to create barriers.
+- Right-click on a placed node to remove it.
+- Press the Spacebar to start the A* algorithm visualization.
+- Press 'c' to clear the grid and reset.
 ## Screenshots
 ![A* Pathfinding Algorithm Visualization](path_plann.png)
 
