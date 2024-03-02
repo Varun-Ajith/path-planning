@@ -15,8 +15,14 @@ pip install pygame
 After installing Pygame, you can clone this repository using the following command:
 git clone https://github.com/Varun-Ajith/path-planning.git
 
-Navigate to the cloned directory: `cd path-planning`
-Run the Python script: `python Path_planning.py`
+Navigate to the cloned directory: 
+```
+cd path-planning
+```
+Run the Python script: 
+```
+python Path_planning.py
+```
 
 ## Instructions
 - Left-click on any empty grid square to place the starting node.
