@@ -28,13 +28,13 @@ Left-click and drag to create barriers.
 Right-click on a placed node to remove it.
 Press the Spacebar to start the A* algorithm visualization.
 Press 'c' to clear the grid and reset.
-##Screenshots
+## Screenshots
 ![A* Pathfinding Algorithm Visualization](path_plann.png)
 
-Credits
+## Credits
 This project was developed by Varun Ajith.
 
-##Acknowledgments
+## Acknowledgments
 This project is inspired by the concepts of pathfinding algorithms and the visualization provided by Pygame.
 Special thanks to the developers of Pygame for providing a simple and intuitive framework for creating games and simulations in Python.
 Feel free to contribute to this project by forking and submitting a pull request! If you encounter any issues or have suggestions for improvement, please open an issue.
