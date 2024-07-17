@@ -31,8 +31,8 @@ python Path_planning.py
 - Right-click on a placed node to remove it.
 - Press the Spacebar to start the A* algorithm visualization.
 - Press 'c' to clear the grid and reset.
-## Screenshots
-![A* Pathfinding Algorithm Visualization](a.gif)
+
+![A* algorithm working](a.gif)
 
 ## Credits
 This project was developed by Varun Ajith.
