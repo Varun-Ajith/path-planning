@@ -32,7 +32,7 @@ python Path_planning.py
 - Press the Spacebar to start the A* algorithm visualization.
 - Press 'c' to clear the grid and reset.
 ## Screenshots
-![A* Pathfinding Algorithm Visualization](path_plann.png)
+![A* Pathfinding Algorithm Visualization](a.gif)
 
 ## Credits
 This project was developed by Varun Ajith.
