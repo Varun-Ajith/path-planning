@@ -34,8 +34,8 @@ python Path_planning.py
 
 ![A* algorithm working](a.gif)
 
-## Credits
-This project was developed by Varun Ajith.
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 This project is inspired by the concepts of pathfinding algorithms and the visualization provided by Pygame.
