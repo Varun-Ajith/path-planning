@@ -100,6 +100,7 @@ python3 cbs.py input.yaml output.yaml
 ### Requirements
 - Python 3.x: This code is designed to run on Python 3. Make sure you have Python 3 installed.
 
+### Videos
 - Successful trial of cbs /  No conflict
 ![Successful trial of cbs/ No conflict](success_2x2.gif)
 - Failed trial of cbs/occurence of conflict
