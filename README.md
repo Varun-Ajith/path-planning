@@ -177,7 +177,7 @@ This section of the project implements a decentralized obstacle avoidance system
 
 | **Test 1**                                       | **Test 2**                                       |
 |--------------------------------------------------|--------------------------------------------------|
-| ![55to55](55to55.gif)                            | ![01to78](01t078.gif)                            |
+| ![55to55](55to55.gif)                            | ![01to78](01to78.gif)                          |
 
 
 
