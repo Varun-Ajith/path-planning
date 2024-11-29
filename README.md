@@ -3,25 +3,31 @@
 ## A* algorithm 
 
 A* is a widely used pathfinding algorithm in computer science and is particularly efficient in finding the shortest path between nodes on a weighted graph.
+
 ### Project Overview
 
 This project was developed to implement the A* pathfinding algorithm as part of a larger effort in autonomous navigation for robots. The A* algorithm plays a crucial role in determining the optimal path for a robot to navigate from one point to another while avoiding obstacles.
+
 ### Getting Started
 
 To run the A* pathfinding algorithm visualizer, ensure you have Python installed on your system. Additionally, you need to have Pygame installed. You can install Pygame using pip:
-
 ```
 pip install pygame
 ```
 
 After installing Pygame, you can clone this repository using the following command:
+```
 git clone https://github.com/Varun-Ajith/path-planning.git
+```
 
 Navigate to the cloned directory: 
+
 ```
 cd path-planning
 ```
+
 Run the Python script: 
+
 ```
 python Path_planning.py
 ```
@@ -38,7 +44,7 @@ python Path_planning.py
 
 ## Conflict-Based Search (CBS) Pathfinding Algorithm
 
-This pathfinding algorithm implements a **Conflict-Based Search (CBS)** algorithm for multi-agent pathfinding, along with a low-level A* search. The implementation includes features such as conflict resolution, admissible heuristics, and support for vertex and edge constraints.
+This pathfinding algorithm implements a Conflict-Based Search (CBS) algorithm for multi-agent pathfinding, along with a low-level A* search. The implementation includes features such as conflict resolution, admissible heuristics, and support for vertex and edge constraints.
 
 ### Features
 
@@ -101,10 +107,78 @@ python3 cbs.py input.yaml output.yaml
 - Python 3.x: This code is designed to run on Python 3. Make sure you have Python 3 installed.
 
 ### Videos
-- Successful trial of cbs /  No conflict
-![Successful trial of cbs/ No conflict](success_2x2.gif)
-- Failed trial of cbs/occurence of conflict
-![Failed trial of cbs/occurence of conflict](failed_8x8.gif)
+1. Test 1:  Successful trial of cbs /  No conflict.
+2.  Failed trial of cbs/occurence of conflict.
+
+
+| **Test 1**                                                               | **Test 2**                                                                       |
+|--------------------------------------------------------------------------|----------------------------------------------------------------------------------|
+| ![Successful trial of cbs/ No conflict](success_2x2.gif)                 | ![Failed trial of cbs/occurence of conflict](failed_8x8.gif)                     |
+
+
+## Velocity Obstacle
+
+This section of the project implements a decentralized obstacle avoidance system for multi-robot navigation using the Velocity Obstacle (VO) algorithm. Each robot autonomously avoids obstacles and other robots while moving toward its goal.
+
+### Features
+
+   - Real-time multi-robot navigation in a shared environment.
+   - Collision avoidance using the Velocity Obstacle algorithm.
+   - Dynamic visualization of robots, obstacles, and their paths using `matplotlib`.
+   - Configurable simulation parameters.
+### How It Works
+
+1. Environment Setup:
+   - Robots and obstacles are initialized with positions and velocities.
+   - The simulation calculates paths dynamically based on VO constraints.
+
+2. Velocity Obstacle Algorithm:
+   - Each robot evaluates potential collisions and adjusts its velocity vector to avoid obstacles.
+
+3. Visualization:
+   -The simulation displays robots (green), obstacles (aqua), and the robot's goal direction (red dashed line).
+
+### Installation
+
+   1. Clone the repository:
+      ```
+      git clone https://github.com/Varun-Ajith/path-planning.git
+      cd decentralized/
+      ```
+   2. Install dependencies:
+      ```
+      pip install numpy matplotlib
+      ```
+   3. Run the simulation:
+      ```
+      python3 decentralized.py -f velocity_obstacle/velObs.avi -m velocity_obstacle
+      ```
+### Visualization
+
+   - Green circle: Robot.
+   - Aqua circles: Obstacles.
+   - Red dashed line: Goal direction.
+   - Blue dashed line: Robot's path.
+
+### Requirements
+- Python 3.x: This code is designed to run on Python 3. Make sure you have Python 3 installed.
+
+### Simulation parameters
+
+| Argument | Description                                          |
+|----------|------------------------------------------------------|
+| `-m`     | Simulation mode (`velocity_obstacle`)                |
+| `-f`     | Filename to save the simulation (e.g., `output.mp4`) |
+
+     
+### Videos
+1. Test 1: The robot tries to stay at (5, 5), while avoiding collisions with the dynamic obstacles.
+2. Test 2: The robot moves from (0, 1) to (7, 8), while avoiding obstacles.
+
+| **Test 1**                                       | **Test 2**                                       |
+|--------------------------------------------------|--------------------------------------------------|
+| ![55to55](55to55.gif)                            | ![01to78](01t078.gif)                            |
+
 
 
 ## License
@@ -112,4 +186,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgments
 Special thanks to the developers of Pygame and matplotlib for providing a simple and intuitive framework for creating games and simulations in Python.
+
 Feel free to contribute to this project by forking and submitting a pull request! If you encounter any issues or have suggestions for improvement, please open an issue.
