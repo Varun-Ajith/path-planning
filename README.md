@@ -150,7 +150,7 @@ This section of the project implements a decentralized obstacle avoidance system
    1. Clone the repository:
       ```
       git clone https://github.com/Varun-Ajith/path-planning.git
-      cd decentralized/
+      cd decentralized/velocity_obstacle
       ```
    2. Install dependencies:
       ```
