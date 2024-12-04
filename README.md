@@ -131,6 +131,8 @@ This section of the project implements a decentralized obstacle avoidance system
    - Collision avoidance using the Velocity Obstacle algorithm.
    - Dynamic visualization of robots, obstacles, and their paths using `matplotlib`.
    - Configurable simulation parameters.
+
+
 ### How It Works
 
 1. Environment Setup:
@@ -154,7 +156,7 @@ This section of the project implements a decentralized obstacle avoidance system
       ```
       pip install numpy matplotlib
       ```
-   3. Run the simulation:
+   3. Run and save the simulation:
       ```
       python3 decentralized.py -f velocity_obstacle/velObs.avi -m velocity_obstacle
       ```
@@ -182,7 +184,61 @@ This section of the project implements a decentralized obstacle avoidance system
 
 | **Test 1**                                       | **Test 2**                                       |
 |--------------------------------------------------|--------------------------------------------------|
-| ![55to55](55to55.gif)                            | ![01to78](01to78.gif)                          |
+| ![55to55](55to55.gif)                            | ![01to78](01to78.gif)                            |
+
+
+
+## Non-linear Model predictive control
+This module implements Nonlinear Model Predictive Control (NMPC) for advanced path planning and motion control. NMPC optimizes a robot's trajectory in real-time by solving a nonlinear optimization problem, considering both the dynamics of the system and environmental constraints.
+
+### Features
+
+- Solves nonlinear optimization problems in real-time to compute the optimal control input.
+- Supports user-defined constraints, such as state and input bounds, obstacle avoidance, and path smoothness.
+- Incorporates nonlinear system dynamics for accurate control.
+- Predicts future states over a finite time horizon and adjusts controls iteratively.
+
+### How it work
+
+1. **System model**: Define the nonlinear system model using differential equations. The model can represent robot kinematics or dynamics, such as differential drive or 6-DoF motion.
+2. **Optimizaation problem**: At each time step, NMPC solves an optimization problem that minimizes a cost function while respecting constraints.
+3. **Receeding horizon**: NMPC uses a moving time horizon. The solution provides the control inputs for the current time step, and the horizon shifts forward as the simulation progresses.
+4. **Collision Avoidance**: Obstacle positions and trajectories are considered as dynamic constraints within the optimization problem.
+5. **Visualization**: Simulated robot trajectories and control inputs are visualized in real-time using `matplotlib`.
+
+### Installation
+1. Clone the repository :
+   ```
+   git clone https://github.com/Varun-Ajith/path-planning.git
+   cd decentralized/nlmpc
+   ```
+2. Install dependencies :
+   ```
+   pip install matplotlib scipy numpy
+   ```
+3. Run the simulation :
+   ```
+   python3 decentralized.py -m nmpc
+   ```
+4. To save the simulation video (Optional) :
+   ```
+   python3 decentralized.py -f nlmpc/nmpc.avi -m nmpc
+   ```
+### Visualization
+
+- Predicted Trajectories: Displayed as a dashed line.
+- Robot Position: Current position of the robot is shown as a marker.
+- Obstacle Constraints: Represented as shaded regions or dynamic marker.
+
+### Videos
+
+1. Test 1: The robot tries to move from (2, 3) to (4, 5, while avoiding collisions with the dynamic obstacles.
+2. Test 2: The robot moves from (7, 6) to (5, 5), while avoiding obstacles.
+
+| **Test 1**                                       | **Test 2**                                       |
+|--------------------------------------------------|--------------------------------------------------|
+| ![23to45](23to45.gif)                            | ![76to55](76to55.gif)                            |
+
 
 
 
