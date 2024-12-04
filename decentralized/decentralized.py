@@ -1,5 +1,6 @@
 import velocity_obstacle.velObs as velOb
 import argparse
+import nlmpc.nonlinearmpc as nmpc
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -12,5 +13,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
     if args.mode == "velocity_obstacle":
         velOb.simulate(args.filename)
+    elif args.mode == "nmpc":
+        nmpc.simulate(args.filename)
     else:
         print("Please enter correctly")
