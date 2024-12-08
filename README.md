@@ -42,9 +42,9 @@ python Path_planning.py
 
 ### Videos
 
-| **Sample video 1**                                       | **Sample video 2**                                       |
+| **Sample video 1**                               | **Sample video 2**                               |
 |--------------------------------------------------|--------------------------------------------------|
-| ![A* algorithm working](a.gif)                   | ![A* algorithm working](a1.gif)                   |
+| ![A* algorithm working](a.gif)                   | ![A* algorithm working](a1.gif)                  |
 
 
 ## Conflict-Based Search (CBS) Pathfinding Algorithm
